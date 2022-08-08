@@ -1,5 +1,5 @@
 # Object Oriented Programming Project
-This directory contains the completed individual final project for my Object Oriented Programming course: a cardgame application based on the game Egyptian Rat Slap (or ERS).
+This directory contains the completed individual final project for my Object Oriented Programming course: an application based on the card game ERS (meaning Egyptian Rat Screw or Slap).
 The project was completed in Fall 2021, using the NetBeans 8.2 IDE.
 Included in this directory are screenshots and source files for the project.
 
