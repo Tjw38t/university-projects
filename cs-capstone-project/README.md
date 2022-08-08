@@ -3,4 +3,5 @@ This directory contains the completed documentation for my team's Computer Scien
 The project is unfinished, with development beginning in August, 2022.
 Included in this repository is the Design Documentation for the project, including research, design specifications, and development strategy.
 
-In contribution to this documentation, I completed research regarding real-world methods of solving a Rubik's cube, identified which of these methods to implement, and provided design specifications and psuedocode for these methods. As development begins this Fall I will serve as a backend developer, specifically contributing to the solving algorithms based on real-world methods.
+In contribution to this documentation, I completed research regarding real-world methods of solving a Rubik's cube, identified which of these methods to implement, and provided design specifications, diagrams, and psuedocode for these methods.
+As development begins this Fall I will serve as a backend developer, specifically contributing to the solving algorithms based on real-world methods.
