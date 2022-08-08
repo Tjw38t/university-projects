@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="403.0" prefWidth="372.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tjw38tfinalproject.AboutFXMLController">
+   <children>
+      <ScrollPane prefHeight="403.0" prefWidth="372.0">
+         <content>
+            <VBox prefHeight="448.0" prefWidth="403.0">
+               <children>
+                  <Button fx:id="menuBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="359.0" text="Back to Menu" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="About/Rules" textAlignment="CENTER" wrappingWidth="357.47007751464844">
+                     <font>
+                        <Font name="Britannic Bold" size="38.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="About:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This Application was created by 21 year old Computer Science major Tyler Wilkins as his final project for CS3330 at the University of Missouri. It is a simplified version of the card game “Egyptian Rat Slap” (also called ERS) based on the rules found at bicyclecards.com. It allows users to play the against a virtual opponent set to one of three difficulty options. Each difficulty setting will change how quickly the virtual opponent takes their next action. On all difficulty settings, the virtual opponent has a 20% chance of failing to slap the deck when it is legal to do so." wrappingWidth="353.13671875" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="How to play:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ERS is a game where the goal is to collect all of the cards in the deck. The game begins with each player being dealt half the deck. Then one player (in this application you) begins the game by laying down a card face up without knowing what it is before-hand. Then the next player quickly lays down a card in the same way, and the players continue this going back and forth laying down cards. This continues until one of the patterns on the right appears in the pile. When a pattern appears, the players both have the option to “slap” the pile. If a player slaps the pile before their opponent slaps or lays down another card, the cards in the pile are added to the player’s hand. Be warned though, if you slap when it is illegal to do so, you will be penalized 1 card from your hand. Play continues until the game ends when one player runs out of cards in their hand. When this happens, the player who still has cards in their hand wins the game! " wrappingWidth="350.8525390625" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="When to slap:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <VBox prefHeight="365.0" prefWidth="328.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Double: when the top card has the same value as the previous card (ex: 9, 9; or, A, A)" wrappingWidth="316.9088134765625" />
+                        <Text layoutX="10.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sandwich: when the top card is played onto a card of equal value, with a differing card between them (ex: 7, 4, 7; or Q, J, Q)" wrappingWidth="279.18585205078125" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top Bottom: the top card and the bottom card have the same value (ex: 7, 4, 5, 7)" wrappingWidth="281.2578125" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tens: the top card's value and the previous card's value add to a sum of10 (ex: 7, 3; or A, 9)" wrappingWidth="293.69793701171875" />
+                        <Text layoutX="10.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Four in a Row: the value of the four cards last placed consistently ascend or descend (ex: A, 2, 3, 4; or 9, 8, 7, 6)" wrappingWidth="310.1829833984375" />
+                        <Text layoutX="10.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Marriage: a king and a queen are placed one above the other (ex: K, Q; or Q, K)" wrappingWidth="316.54205322265625" />
+                        <Text layoutX="10.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

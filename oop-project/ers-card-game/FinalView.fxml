@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="403.0" prefWidth="372.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tjw38tfinalproject.FXMLDocumentController">
+    <children>
+        <Button fx:id="p1PlaceBtn" layoutX="113.0" layoutY="364.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="146.0" text="Place Card" textAlignment="CENTER" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Text fx:id="slapDisplayText" layoutX="149.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="p1CardCount" layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You:" wrappingWidth="114.056640625">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font></Text>
+      <Text fx:id="p2CardCount" layoutX="227.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joshua:" textAlignment="RIGHT" wrappingWidth="130.14453125">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font></Text>
+      <Button fx:id="p1SlapBtn" layoutX="113.0" layoutY="329.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="SLAP" textAlignment="CENTER" />
+      <Text fx:id="mainCardCount" layoutX="87.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pile:" textAlignment="CENTER" wrappingWidth="199.0">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font></Text>
+      <ImageView fx:id="cardImgView" fitHeight="223.0" fitWidth="184.0" layoutX="113.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@red_back.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="cardDisplayText" layoutX="28.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Place 1st card!" textAlignment="CENTER" wrappingWidth="314.5859375">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Text>
+    </children>
+   <cursor>
+      <Cursor fx:constant="OPEN_HAND" />
+   </cursor>
+</AnchorPane>
