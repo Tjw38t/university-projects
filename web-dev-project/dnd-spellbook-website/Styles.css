@@ -1,0 +1,169 @@
+/* 
+    Parchement.png taken from https://www.cleanpng.com/png-paper-scroll-papyrus-stock-photography-parchment-o-1060878/download-png.html
+    Desktop.png taken from https://www.flickr.com/photos/bittbox/5661250283/in/album-72157626467523959/
+    Book.png taken from https://www.rpnation.com/gallery/book-open-jpeg.34016/
+    'Nova Cut' font taken from https://fonts.google.com/specimen/Nova+Cut?query=cu&selection.family=Nova+Cut&sidebar.open=true#standard-styles
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap');
+
+.clearFix::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#bodyId{
+    background-image: url(Desktop.jpg);
+    background-size: cover;
+}
+
+#spellView{
+    float: left;
+    background-image: url(Parchement.png);
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 750px;
+    position: relative;
+    margin-left: 300px;
+    margin-right: auto;
+    padding-left: 125px;
+    padding-top: 150px;
+    border-bottom: 5px solid #654503;
+}
+.spellDescDiv{
+    width:80%;
+}
+.spellbookDescDiv{
+    width:80%;
+    margin-left: 20%;
+}
+
+#selectForm{
+    float: left;
+    min-height: 100%;
+}
+
+#searchForm{
+    float: right;
+    max-width: 30%;
+    margin-right: 70px;
+    margin-top: 20px;
+}
+
+#spellbookSearch{
+    margin-bottom: 5px;
+}
+
+#spellbookDiv{
+    background-image: url(book.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 900px;
+    width:1300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.bookPageDiv{
+    float:left;
+    height: 100%;
+    width: 48%;
+    overflow: scroll;
+}
+
+#listTitle{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.bookPageDiv #nameDiv{
+    margin-top: 25px;
+}
+
+#cardWrapper{
+    border-style: ridge;
+    border-width: 7px;
+    border-color:darkgoldenrod;
+    border-radius: 5px;
+    box-shadow: 5px 5px black;
+    width: 50%;
+    position: relative;
+    margin-left: 10px auto;
+    margin-right: 10px auto;
+    margin-bottom: 20px;
+    background-color:firebrick;
+}
+
+.cardColumn{
+    width:30%;
+    display:inline-block;
+    float:left;
+    background-color:darkgoldenrod;
+    text-align: center;
+}
+
+#cardColumnThree{
+    width:40%;
+    display:inline-block;
+    float:left;
+    background-color:firebrick;
+    text-align: center;
+}
+
+#cardImg{
+    position: relative;
+    display: block;
+    margin: 10px;
+    width:90%;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: dimgrey;
+    border-radius: 5px;
+}
+
+#projectsWrapper{
+    flex-wrap: wrap-reverse;
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.projectCardColumn{
+    width:30%;
+    background-color: firebrick;
+    border-width: 4px;
+    border-style: ridge;
+    border-color: darkgoldenrod;
+    border-radius: 5px;
+    box-shadow: 5px 5px black;
+    width: 400px;
+    height: 250px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    overflow:auto;
+}
+
+.projectCardImage{
+    width: 55%;
+    height: 100%;
+    border-right: 4px ridge darkgoldenrod;
+    float: left
+}
+
+.projectCardDesc{
+    width: 40%;
+    float:left;
+    margin-right: 5px;
+}

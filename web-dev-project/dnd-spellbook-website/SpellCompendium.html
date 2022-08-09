@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>Test</title>
+        
+        <link rel="stylesheet" type="text/css" href="Styles.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script>
+            var dictionary;
+            function start(){
+                $.get("spellList.xml", function(data){
+                        dictionary = data;
+                        console.log(data.getElementsByTagName("name"));
+                        update();
+                    
+                    for(var i = 0; i < data.getElementsByTagName("name").length; i++){
+                            document.getElementById("rovSelect").innerHTML += '<option value="' + i + '" id="spellNum' + i + '" class="camClass" selected>' + data.getElementsByTagName("name").item(i).innerHTML + '</option>'; 
+                        }
+                    document.getElementById("rovSelect").value = "0";
+                });
+            }
+        
+            function update(){
+                document.getElementById("nameDiv").innerHTML = "<h2>" + dictionary.getElementsByTagName("name").item(document.getElementById("rovSelect").value).innerHTML + "</h2>"
+                document.getElementById("lvlDiv").innerHTML = "<p>Level: " + dictionary.getElementsByTagName("level").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+                document.getElementById("castDiv").innerHTML = "<p>Casting Time: " + dictionary.getElementsByTagName("casting_time").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+                document.getElementById("rngDiv").innerHTML = "<p>Range: " + dictionary.getElementsByTagName("range").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+                document.getElementById("compDiv").innerHTML = "<p>Components: " + dictionary.getElementsByTagName("components").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+                document.getElementById("durDiv").innerHTML = "<p>Duration: " + dictionary.getElementsByTagName("duration").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+                document.getElementById("descDiv").innerHTML = "<p>" + dictionary.getElementsByTagName("description").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+            }
+        </script>
+    </head>
+    
+    <body onload="start()" id="bodyId" class="clearFix">
+        <form id="selectForm">
+                            <select id="rovSelect" class="formInputs" onchange="update()" size="5">
+                                <option value="default" disabled>SELECT</option>
+                            </select>
+        </form>
+            <div id="spellView">
+            <div id="nameDiv" class="spellDescDiv"></div>
+            <div id="lvlDiv" class="spellDescDiv"></div>
+            <div id="castDiv" class="spellDescDiv"></div>
+            <div id="rngDiv" class="spellDescDiv"></div>
+            <div id="compDiv" class="spellDescDiv"></div>
+            <div id="durDiv" class="spellDescDiv"></div>
+            <div id="descDiv" class="spellDescDiv"></div>
+        </div>
+    </body>
+    
+</html>
