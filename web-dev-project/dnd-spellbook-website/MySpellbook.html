@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>Test</title>
+        
+        <link rel="stylesheet" type="text/css" href="Styles.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script>
+            var dictionary;
+            function start(){
+                $.get("spellList.xml", function(data){
+                        dictionary = data;
+                        console.log(data.getElementsByTagName("name"));
+                        update();
+                    
+                    for(var i = 0; i < data.getElementsByTagName("name").length; i++){
+                            document.getElementById("rovSelect").innerHTML += '<option value="' + i + '" id="spellNum' + i + '" class="camClass" selected>' + data.getElementsByTagName("name").item(i).innerHTML + '</option>'; 
+                        }
+                    document.getElementById("rovSelect").value = "0";
+                });
+            }
+            
+            function noenter() {
+                return !(window.event && window.event.keyCode == 13); 
+            }
+        
+            function update(){
+                document.getElementById("nameDiv").innerHTML = "<h2>" + dictionary.getElementsByTagName("name").item(document.getElementById("rovSelect").value).innerHTML + "</h2>"
+                document.getElementById("lvlDiv").innerHTML = "<p>Level: " + dictionary.getElementsByTagName("level").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+                document.getElementById("castDiv").innerHTML = "<p>Casting Time: " + dictionary.getElementsByTagName("casting_time").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+                document.getElementById("rngDiv").innerHTML = "<p>Range: " + dictionary.getElementsByTagName("range").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+                document.getElementById("compDiv").innerHTML = "<p>Components: " + dictionary.getElementsByTagName("components").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+                document.getElementById("durDiv").innerHTML = "<p>Duration: " + dictionary.getElementsByTagName("duration").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+                document.getElementById("descDiv").innerHTML = "<p>" + dictionary.getElementsByTagName("description").item(document.getElementById("rovSelect").value).innerHTML + "</p>"
+            }
+            
+            function searchUpdate(){
+                var searchString = document.getElementById("spellbookSearch").value.toLowerCase();
+                console.log(searchString);
+                
+                document.getElementById("rovSelect").innerHTML = '<option value="default" disabled>SELECT</option>';
+                
+                for(var j = 0; j < dictionary.getElementsByTagName("name").length; j++){
+                          
+                    var spellName = dictionary.getElementsByTagName("name").item(j).innerHTML.toLowerCase();
+                    
+                    if(spellName.includes(searchString)){
+                       document.getElementById("rovSelect").innerHTML += '<option value="' + j + '" id="spellNum' + j + '" class="camClass" selected>' + dictionary.getElementsByTagName("name").item(j).innerHTML + '</option>'; 
+                    } 
+                }
+                
+                document.getElementById("rovSelect").value = "default";
+            }
+            
+        </script>
+    </head>
+    
+    <body id="bodyId" onload="start()">
+        
+        <div id="spellbookDiv" class="clearFix">
+            <div class="bookPageDiv" id="leftPage">
+                 <form id="searchForm" action="#" method="get">
+                     <label>Search:</label>
+                     <input type="text" id="spellbookSearch" onchange="searchUpdate()" onkeypress="return noenter()">
+                     <select id="rovSelect" class="formInputs" onchange="update()" size="5">
+                     </select>
+                     <button class="addBtn" name="addBtn" onclick="addToTable()">Add to List</button>
+                </form>
+                <div id="nameDiv" class="spellbookDescDiv"></div>
+                <div id="lvlDiv" class="spellbookDescDiv"></div>
+                <div id="castDiv" class="spellbookDescDiv"></div>
+                <div id="rngDiv" class="spellbookDescDiv"></div>
+                <div id="compDiv" class="spellbookDescDiv"></div>
+                <div id="durDiv" class="spellbookDescDiv"></div>
+                <div id="descDiv" class="spellbookDescDiv"></div>
+            </div>
+            <div class="bookPageDiv">
+                
+                <div id="listTitle">
+                    <h1>Known Spells</h1>
+                </div>
+
+                <div id="listDiv" class="clearFix">
+
+                <div id="toDoListHead" class="clearFix">
+
+                    <div class="headColumn">
+                        <h3>Title</h3>
+                    </div>
+
+                    <div class="headColumn">
+                        <h3>Type</h3>
+                    </div>
+
+                    <div class="headColumn">
+                        <h3>Priority</h3>
+                    </div>
+
+                    <div class="headColumn">
+                        <h3>Date</h3>
+                    </div>
+
+                    <div class="headColumn">
+                        <h3>Action</h3>
+                    </div>
+
+                </div>
+
+            </div>
+        
+        </div>
+        </div>
+        
+    </body>
+    
+</html>
+
