@@ -1,2 +1,2 @@
 # university-projects
-Public repository featuring projects completed during Computer Science coursework at the University of Missouri
+This repository features projects completed by Tyler Wilkins during Computer Science coursework at the University of Missouri.
